@@ -1,0 +1,465 @@
+---
+title: "Bellabeat Case-Study"
+author: "Neeraj Kumar"
+date: "22-March-2025"
+output: html_document
+---
+
+![](images/clipboard-2302286957.png)
+
+# *HOW CAN A WELLNESS COMPANY PLAY IT SMART?*
+
+------------------------------------------------------------------------
+
+## 1. [**Introduction**]{.underline}
+
+Bellabeat is a high-tech wellness technology company that specializes in health-focused smart products designed specifically for women. Founded in 2013 by Urška Sršen and Sando Mur, the company combines innovative technology with elegant design to empower women by providing insights into their health, fitness, and well-being.
+
+With a diverse product line that includes wearable wellness trackers, smart water bottles, and a mobile app, Bellabeat collects and analyzes data on activity, sleep, stress, hydration, and reproductive health. By leveraging this data, the company aims to enhance user experiences and promote healthier lifestyles.
+
+### **Characters:**
+
+-   **Urška Sršen** – Cofounder and Chief Creative Officer of Bellabeat, responsible for product design and innovation.
+-   **Sando Mur** – Cofounder and mathematician, a key member of the executive team.
+-   **Bellabeat Marketing Analytics Team** – A team of data analysts who collect, analyze, and report data to shape the company's marketing strategies.
+
+### **Products:**
+
+-   **Bellabeat App** – A health tracking app that monitors activity, sleep, stress, menstrual cycles, and mindfulness habits.
+-   **Leaf** – A stylish wellness tracker wearable as a bracelet, necklace, or clip, tracking activity, sleep, and stress.
+-   **Time** – A smart wellness watch that blends classic design with technology to track daily wellness metrics.
+-   **Spring** – A smart water bottle that tracks hydration levels and syncs with the Bellabeat app.
+-   **Bellabeat Membership** – A subscription-based service offering personalized guidance on health, fitness, and mindfulness.
+
+## 2. [**Scenario**]{.underline}
+
+As a junior data analyst at Bellabeat, you are part of the marketing analytics team responsible for using data to guide business decisions. Bellabeat, a leading wellness technology company, wants to expand its presence in the global smart device market by leveraging data-driven insights.
+
+Urška Sršen, Bellabeat’s cofounder and Chief Creative Officer, believes that analyzing smart device fitness data can help identify trends and new growth opportunities. You have been assigned to focus on one of Bellabeat’s products and analyze smart device usage data to gain insights into consumer behavior.
+
+### **Your Tasks:**
+
+-   Analyze smart device usage data to identify trends in consumer habits.
+-   Compare Bellabeat’s products with market trends to discover potential opportunities.
+-   Provide insights into how consumers use non-Bellabeat smart devices.
+-   Select one Bellabeat product and apply insights to improve its market strategy.
+-   Develop high-level marketing recommendations based on your analysis.
+-   Present your findings to the Bellabeat executive team with supporting data visualizations.
+
+Your report and recommendations will help Bellabeat refine its marketing approach and strengthen its position in the smart wellness market.
+
+## 3. [**Phase 1: Ask**]{.underline}
+
+In this phase, the goal is to define the business problem and establish clear objectives for the data analysis.
+
+### **Business Task:**
+
+Bellabeat wants to leverage data-driven insights to refine its marketing strategy and expand its presence in the smart wellness market. By analyzing smart device usage data, the company aims to understand consumer habits and apply these insights to enhance its product positioning and marketing efforts.
+
+### **Key Questions to Address:**
+
+1.  **What are the current trends in smart device usage?**
+2.  **How do these trends relate to Bellabeat’s target customers?**
+3.  **How can these insights be used to improve Bellabeat’s marketing strategy?**
+
+### **Key Stakeholders:**
+
+-   **Urška Sršen** – Cofounder and Chief Creative Officer, leading the company's vision and product development.
+-   **Sando Mur** – Cofounder and key executive involved in strategic decision-making.
+-   **Bellabeat Marketing Analytics Team** – Responsible for data collection, analysis, and reporting to guide marketing strategies.
+
+By defining the problem and identifying the right questions, this phase ensures that the analysis remains focused on providing actionable insights for Bellabeat's business growth.
+
+## 4. [**Phase 2: Prepare**]{.underline}
+
+In this phase, the focus is on gathering, assessing, and preparing the data for analysis while ensuring its credibility, security, and usability.
+
+### **Data Sources:**
+
+-   **Fitbit Fitness Tracker Data (CC0: Public Domain, available on Kaggle)**
+    -   Collected from 30 Fitbit users who consented to share their fitness tracker data.
+    -   Includes minute-level data on physical activity, heart rate, and sleep monitoring.
+    -   Provides insights into daily activity levels, step counts, and other wellness habits.
+
+### **Data Assessment:**
+
+**Credibility of Data:**
+
+-   **Source Reliability:** The dataset is publicly available on Kaggle and falls under a CC0 (Public Domain) license, meaning it can be freely used and modified.
+-   **Data Integrity:** Since it comes from self-reported or automatically collected Fitbit device data, it is likely to be accurate, but there may be potential inconsistencies or missing values.
+-   **Potential Bias:**
+    -   The dataset includes only 30 users, which is a small sample size and may not be representative of Bellabeat’s target audience.
+    -   Users are limited to Fitbit device owners, excluding data from other smart wellness device users.
+    -   Demographic details such as age, gender, and location are not provided, limiting segmentation analysis.
+
+### **Licensing, Privacy, Security, and Accessibility:**
+
+-   **Licensing:**
+    -   The dataset is under a CC0 license, meaning it is open-source and can be used without restrictions.
+-   **Privacy & Security:**
+    -   No personally identifiable information (PII) is included in the dataset, ensuring compliance with data privacy regulations.
+    -   Users consented to sharing their anonymized data, making it ethically sound for analysis.
+-   **Accessibility:**
+    -   The dataset is freely available on Kaggle, making it easily accessible for analysis.
+    -   Data is stored in CSV format, which is widely supported by various data analysis tools.
+
+### **Challenges with the Data:**
+
+1.  **Small Sample Size:** The dataset includes only 30 users, which may not provide a comprehensive view of consumer behavior.
+2.  **Lack of Diversity:** Data is collected from Fitbit users, which may not fully represent Bellabeat’s customer base or the wider smart wellness market.
+3.  **Limited Data Scope:** The dataset focuses primarily on physical activity, sleep, and heart rate, but does not include other wellness metrics such as hydration or menstrual cycle tracking, which are key to Bellabeat’s offerings.
+4.  **Potential Data Gaps:** Some records may have missing values or inconsistencies that need to be addressed during data cleaning.
+5.  **No Direct Bellabeat Product Data:** Since the data comes from Fitbit users, it does not provide direct insights into how customers interact with Bellabeat’s products.
+
+### **Data Preparation Steps:**
+
+1.  **Download and securely store the dataset.**
+2.  **Identify the data structure (columns, data types, missing values, and inconsistencies).**
+3.  **Assess and clean the data by handling missing values and filtering out irrelevant information.**
+4.  **Sort and filter the dataset to focus on relevant metrics (e.g., activity levels, sleep patterns, stress levels).**
+5.  **Document any assumptions or adjustments made during data preparation.**
+
+By thoroughly assessing and preparing the dataset while considering its credibility, privacy, and accessibility, we ensure that the data is reliable and suitable for generating meaningful insights in the next phase.
+
+## 5. [**Phase 3: Process**]{.underline}
+
+In this phase, the dataset is cleaned, transformed, and prepared using **R** to ensure accuracy and usability for analysis.
+
+### **Key Steps in Data Processing:**
+
+1.  **Load the Data-set:**
+    -   Import the Fit-bit data set into R for processing and analysis.
+2.  **Check for Missing or Incomplete Data:**
+    -   Identify any missing values in key metrics such as steps, calories, sleep duration, and heart rate.
+    -   Handle missing data by either removing incomplete records or filling gaps with appropriate statistical methods (e.g., median values).
+3.  **Remove Duplicates and Inconsistencies:**
+    -   Detect and eliminate duplicate entries to prevent skewed analysis.
+    -   Ensure data types are correctly formatted (e.g., converting date columns to the proper format).
+4.  **Standardize and Normalize Data:**
+    -   Convert time-related data into a consistent format.
+    -   Normalize key numerical variables (e.g., step counts, sleep duration) to allow for meaningful comparisons between users.
+5.  **Filter and Transform Data:**
+    -   Select relevant columns for analysis, focusing on key wellness metrics.
+    -   Aggregate data into daily summaries to identify trends over time.
+6.  **Verify Data Integrity:**
+    -   Conduct exploratory data analysis (EDA) to detect anomalies, such as extreme outliers.
+    -   Use summary statistics and visualizations to validate the accuracy of processed data.
+7.  **Document the Cleaning Process:**
+    -   Maintain records of all modifications to ensure transparency and reproducibility.
+
+### **Outcome of the Process Phase:**
+
+-   A **cleaned and well-structured dataset** ready for analysis.
+-   **Elimination of missing values, duplicates, and inconsistencies** to improve data reliability.
+-   **Properly formatted and standardized data** for meaningful comparisons and insights.
+-   **Preliminary exploration of trends and patterns** to guide further analysis.
+
+**Setting up environment**\
+This section loads multiple R packages that are essential for data processing, cleaning, and analysis.
+
+```{r eval=FALSE}
+#load packages
+library(readr)
+library(janitor)
+library(dplyr)
+library(tidyverse)
+library(lubridate)
+```
+
+**Import Data into R**\
+This step imports multiple data sets using the `read_csv()` function from the `readr` package. Each data set contains specific health-related data collected from Fit-bit users.
+
+```{r eval=FALSE}
+#Import Data
+activity <- read_csv("Data/dailyActivity_merged.csv")
+sleep <- read_csv("Data/sleepDay_merged.csv")
+weight <- read_csv("Data/weightLogInfo_merged.csv")
+```
+
+**Data Validation**\
+This step ensures that the imported data-sets have the correct structure by checking their column names.
+
+```{r eval=FALSE}
+#Data Validation
+colnames(activity)
+colnames(sleep)
+colnames(weight)
+
+```
+
+**Preview the Data**\
+This step displays the first few rows of each data-set to understand the structure and contents.
+
+```{r eval=FALSE}
+#Preview Data
+head(activity)
+head(sleep)
+head(weight)
+
+```
+
+**Data Type Conversion, Column Renaming**\
+This step ensures consistency by converting ID columns to character type, formatting date columns, and renaming date-related columns for clarity.
+
+```{r eval=FALSE}
+# Convert Id to character data type 
+# Convert Day to date format 
+# Rename various dates to Day
+  
+activity <-activity %>%
+  mutate_at(vars(Id), as.character) %>%
+  mutate_at(vars(ActivityDate), as.Date, format = "%m/%d/%y") %>%
+  rename("Day"="ActivityDate")
+
+sleep <-sleep %>%
+  mutate_at(vars(Id), as.character) %>%
+  mutate_at(vars(SleepDay), as.Date, format = "%m/%d/%y") %>%
+  rename("Day"="SleepDay")
+
+weight <-weight %>%
+  mutate_at(vars(Id,LogId), as.character) %>%
+  mutate_at(vars(Date),as.Date, format = "%m/%d/%y") %>%
+  rename("Day"="Date")
+```
+
+**Merging Datasets and Adding Day of the Week**\
+This step **combines all three datasets (`sleep`, `activity`, and `weight`)** into a single data-frame while ensuring that no data is lost. It also **adds a new column for the weekday name**, making it easier to analyze trends based on days of the week.
+
+```{r eval=FALSE}
+# Combine data frames & add day of the week 
+
+combined_data <-sleep %>%
+  full_join(activity, by=c("Id","Day")) %>%
+  full_join(weight, by=c("Id", "Day")) %>%
+  mutate(Weekday = weekdays(as.Date(Day, "m/%d/%Y")))
+```
+
+**Removing Duplicates, Counting Missing Values, and Checking Unique Users**\
+This step ensures data quality by removing duplicate rows, counting missing (NA) values, and checking the number of unique users in each data-set.
+
+```{r eval=FALSE}
+# Find and remove duplicate rows & count 'NA' and distinct Ids
+
+ combined_data <-combined_data[!duplicated(combined_data), ]
+  sum(is.na(combined_data))
+  n_distinct(combined_data$Id)
+  n_distinct(sleep$Id)
+  n_distinct(weight$Id)
+```
+
+**Ordering the Days of the Week**\
+This step ensures that the `Weekday` column is correctly **ordered** in a logical sequence (Sunday → Saturday) rather than being treated as un-ordered text. This is important for **proper visualization and analysis**.
+
+```{r eval=FALSE}
+# Order the days of the week
+   
+combined_data$Weekday <-factor(combined_data$Weekday, levels=c
+                               ("Sunday", "Monday", "Tuesday", "Wednesday", 
+	                               "Thursday", "Friday", "Saturday"))
+```
+
+**Generating Summary Statistics**\
+This step provides **descriptive statistics** for key variables, helping to understand the overall distribution, central tendencies, and possible outliers in the dataset.
+
+```{r eval=FALSE}
+# Select summary statistics 
+
+combined_data %>%
+   select(TotalMinutesAsleep, TotalSteps, TotalDistance, VeryActiveMinutes, 
+          FairlyActiveMinutes, LightlyActiveMinutes, SedentaryMinutes, Calories, 
+          WeightKg, Fat, BMI, IsManualReport) %>%
+   summary()
+ 
+```
+
+**Saving the Cleaned Data**\
+This step **saves the cleaned and processed dataset** as a CSV file, ensuring that the data is available for further analysis, visualization, or sharing.
+
+```{r eval=FALSE}
+#Save the cleaned data
+
+write.csv(combined_data,file = "Data/combined_data.csv",row.names = FALSE)
+```
+
+This phase ensures that the dataset is accurate and optimized for the next step: **Analysis**. 🚀
+
+## 6. [**Phase 4: Data Visualizations and Summary**]{.underline}
+
+### **📊 Purpose of Data Visualization**
+
+Data visualization helps in identifying patterns, trends, and insights from our dataset in an intuitive and easy-to-understand manner. By visually analyzing the cleaned data, we can uncover key relationships between variables such as activity levels, calories burned, sleep patterns, and weight changes.
+
+The goal of this phase is to:
+
+1.  **Summarize key metrics** to understand user behavior.
+2.  **Identify trends and correlations** across different days and activity types.
+3.  **Generate actionable insights** that can guide fitness and wellness recommendations.
+
+------------------------------------------------------------------------
+
+**Visualization 1:**
+
+-   The first visualization is a **treemap**, which is used to represent **total calorie burn across different days of the week**.
+-   The **color intensity** represents the total calories burned, with darker colors indicating higher burn.
+-   The **size of the blocks** also corresponds to the total calories burned on each weekday.
+-   This visualization helps us identify which days have the highest and lowest levels of calorie expenditure.
+
+![Calories Burn over Weekdays](Visualization/Calories%20Burn%20over%20Weekdays.png)
+
+------------------------------------------------------------------------
+
+**Visualization 2:**
+
+This **stacked bar chart** represents different types of activity minutes (Lightly Active, Fairly Active, and Very Active) across weekdays. The data is segmented into three separate bar charts for each activity level.
+
+-   **Lightly Active Minutes (Top Chart)** → The highest on Sunday (29,996 minutes), followed by Monday and Tuesday. The lowest activity is observed on Friday.
+
+-   **Fairly Active Minutes (Middle Chart)** → Sunday again leads with 2,179 minutes, while Wednesday has the lowest with 1,526 minutes.
+
+-   **Very Active Minutes (Bottom Chart)** → Sunday has the most intense activity (3,489 minutes), and Friday has the lowest at 2,418 minutes.
+
+![Weekdays VS Diff. Active Minutes](Visualization/Weekdays%20VS%20Diff.%20Active%20Minutes.png)
+
+------------------------------------------------------------------------
+
+**Visualization 3:**
+
+This **stepped area chart** compares **Total Distance (annotated at the bottom)** with different levels of **Total Steps (middle of the chart)** across the weekdays.
+
+-   The **1st step (lower black dashed line)** represents **60% of total steps** for each day.
+-   The **2nd step (upper black dashed line)** represents **80% of total steps** for each day.
+
+![Total Distance VS Total Steps for Weekday](Visualization/Total%20Distance%20VS%20Total%20Steps%20for%20Weekday.png)
+
+------------------------------------------------------------------------
+
+**\
+Visualization 4:** This visualization consists of two **stacked bar charts**, each representing different aspects of sleep behavior across the week. The color gradient represents the **sum of calories burned**. This **dual bar chart** compares:
+
+-   **Total Minutes Asleep (Top Chart)**
+
+-   **Total Time in Bed (Bottom Chart)**
+
+    for each weekday, with **color intensity representing calories burned**.
+
+![Total Time in bed VS Total Min. Asleep for Weekdays](Visualization/Total%20Time%20in%20bed%20VS%20Total%20Min.%20Asleep%20for%20Weekdays.png)
+
+------------------------------------------------------------------------
+
+**Visualization 5:**
+
+This scatter plot visualization analyzes the relationship between **different levels of activity** (Lightly Active, Fairly Active, and Very Active Minutes) and the **average calories burned**. Each point represents an **individual (ID),** and the color-coding differentiates them. A trend line is added to observe general patterns.
+
+**1️⃣ X-Axis (Activity Levels)**
+
+-   **Divided into three sections**:
+    1.  **Lightly Active Minutes** (Left)
+    2.  **Fairly Active Minutes** (Middle)
+    3.  **Very Active Minutes** (Right)
+-   Each section represents the sum of active minutes **for a specific activity intensity level**.
+
+**2️⃣ Y-Axis (Avg. Calories Burned)**
+
+-   This represents the **average calories burned** across different individuals.
+
+**3️⃣ Data Points (Circles)**
+
+-   **Each circle represents an individual (ID)**.
+-   Different **colors** correspond to different individuals.
+
+**4️⃣ Trend Line**
+
+-   The trend line **slopes upward**, indicating that **higher activity levels correlate with higher calorie burn**.
+-   However, the slope is different for each category, suggesting varying efficiency in calorie burning at different activity levels.
+
+![Avg. calories burned per minute of diff. activity levels (Ids)](Visualization/Avg.%20calories%20burned%20per%20minute%20of%20diff.%20activity%20levels%20(Ids).png)
+
+------------------------------------------------------------------------
+
+**Visualization 6:**
+
+This **line chart** tracks the **average total steps** over a period of time. It shows daily fluctuations in step count and highlights the overall trend.
+
+**1️⃣ X-Axis (Time Period)**
+
+-   Represents **daily timestamps** from **April 10 to May 12, 2020**.
+-   The steps are recorded for each day, allowing us to see **patterns over time**.
+
+**2️⃣ Y-Axis (Avg. Total Steps)**
+
+-   Displays the **average number of steps taken** each day.
+-   The values range from **\~3,500 to 8,700** steps.
+
+**3️⃣ Line Chart (Daily Step Trend)**
+
+-   The **blue line** represents the **fluctuations in average daily steps**.
+
+-   Noticeable **peaks and dips** suggest **variations in physical activity** over time.
+
+**4️⃣ Dashed Trend Line**
+
+-   The **gray dashed line** represents the **overall trend** of steps over time.
+
+-   The **downward slope** indicates a **gradual decrease in average steps over the recorded period**.
+
+![Average Steps Over Time](Visualization/Average%20Steps%20Over%20Time.png)
+
+------------------------------------------------------------------------
+
+**Visualization 7:**
+
+Each point represents an **individual (ID)**, showing their **average daily steps** and **average daily calories burned** over a period.
+
+**1️⃣ Positive Correlation Between Steps & Calories Burned**
+
+-   The **trend line indicates that more steps generally lead to higher calorie burn**.
+-   However, **some individuals burn more calories despite taking fewer steps**, suggesting other influencing factors.
+
+**2️⃣ Variability in Calorie Burn**
+
+-   Individuals with **similar step counts** can have **significantly different calorie burns**.
+-   Some people with **4K-6K steps** burn more calories than those with **10K-12K steps**.
+
+🔹 **Possible Factors**:
+
+-   **Intensity of movement (walking vs. running)**
+-   **Body weight (heavier individuals burn more per step)**
+-   **Other exercises (e.g., weight training, cycling)**
+
+**3️⃣ Outliers & Unique Cases**
+
+-   A few individuals burn **\~3,500 calories with moderate steps (\~8K-10K)**, likely due to **high-intensity workouts beyond step tracking**.
+-   Some with **12K+ steps burn only \~2,000 calories**, possibly due to **lower-intensity activities**.
+
+![Average calories burned Vs. Average Steps (Ids)](Visualization/Average%20calories%20burned%20Vs.%20Average%20Steps%20(Ids).png)
+
+------------------------------------------------------------------------
+
+### **7. [Phase 5: Act]{.underline}**
+
+#### **Key Takeaways:**
+
+-   **Correlation Between Steps and Calories Burned**: The data indicates a **positive relationship** between the number of steps taken and calories burned. However, some individuals achieve high calorie burn despite lower step counts, suggesting the impact of **exercise intensity, duration, and metabolic differences**.
+-   **Impact of Activity Intensity**: The analysis highlights that individuals with more **Very Active Minutes** tend to burn more calories per minute. This suggests that **high-intensity activities (e.g., running, HIIT workouts) are more efficient at burning calories** than simply increasing step count.
+-   **Variability in Individual Performance**: Despite the trend, **some individuals deviate from the expected pattern**, possibly due to factors like body composition, fitness level, or external influences (e.g., diet, lifestyle, metabolism). Understanding these variances can help in **customizing fitness plans** for better results.
+
+#### **Recommendations:**
+
+-   **Encourage High-Intensity Activities**: Since Very Active Minutes show the strongest correlation with calorie burn, users should be encouraged to **incorporate more vigorous workouts** rather than just increasing their step count. Activities like **cycling, swimming, weight training, or sprint intervals** can be beneficial.
+-   **Personalized Goal-Setting**: Instead of setting a **universal step goal**, tailor goals based on **individual calorie burn efficiency** and preferred activity types. For example, someone who burns more calories through fewer steps might focus on **strength training and cardio bursts** rather than simply walking more.
+-   **Improve Data Tracking & Insights**: Enhance tracking mechanisms to **capture more variables**, such as **heart rate, metabolic rate, and active vs. passive calories burned**, to get a **more accurate picture** of individual fitness trends. Advanced fitness trackers and smart analytics tools can be leveraged to provide **personalized recommendations**.
+-   **Behavioral Motivation & Engagement**: Implement **gamification techniques**, such as challenges, leaderboards, and rewards, to keep users **engaged in their fitness journey**. Personalized reminders and feedback based on individual performance trends can help sustain motivation.
+
+By acting on these insights, we can create **more effective, data-driven fitness strategies** that cater to individual needs and optimize overall health outcomes.
+
+### **8. [Phase 6: Conclusion]{.underline}**
+
+The analysis of activity levels, steps, and calories burned has provided valuable insights into the relationship between **movement intensity and energy expenditure**. The data confirms that while step count is an important metric, **the intensity of activity plays a more significant role in calorie burn**. Individuals who engage in higher-intensity workouts, reflected in their **Very Active Minutes**, tend to achieve greater calorie expenditure compared to those with similar step counts but lower intensity levels.
+
+Additionally, the variations in individual performance suggest that **a one-size-fits-all approach to fitness tracking may not be ideal**. Factors such as **metabolic rate, workout type, and lifestyle differences** impact the effectiveness of physical activity, highlighting the need for **personalized fitness recommendations**.
+
+Moving forward, the key takeaway is that simply focusing on increasing daily steps may not be the most effective strategy for optimizing calorie burn. Instead, a **more holistic approach that includes high-intensity activities, personalized fitness goals, and improved data tracking** will yield better long-term health outcomes.
+
+By leveraging these insights, we can refine fitness strategies to **maximize efficiency, improve user engagement, and enhance overall well-being**.
+
+—————–————————–—–—–—–————–—–—–—–**End of Case Study**—————–—–—–—————————————————–
